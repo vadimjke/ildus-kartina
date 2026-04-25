@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ильдус Муртазин — Живопись маслом</title>
+  <meta name="description" content="Официальный сайт художника Ильдуса Муртазина. Жанровые картины, пейзажи, городские виды, цветы. Приобрести картину." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <!-- Прелоадер -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__brush">
+      <svg viewBox="0 0 160 24" fill="none">
+        <path class="brush-path" d="M0 12 Q20 4 40 12 Q60 20 80 12 Q100 4 120 12 Q140 20 160 12"
+              stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+      </svg>
+    </div>
+    <div class="preloader__inner">
+      <span class="preloader__name">МУРТАЗИН</span>
+      <div class="preloader__line"><span class="preloader__fill"></span></div>
+      <span class="preloader__count">0</span>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a href="#" class="nav__logo">
+      <span class="nav__logo-abbr">И·М</span>
+      <span class="nav__logo-full">Ильдус Муртазин</span>
+    </a>
+    <nav class="nav__links" aria-label="Основная навигация">
+      <a href="#gallery"    data-nav>Галерея</a>
+      <a href="#categories" data-nav>Категории</a>
+      <a href="#about"      data-nav>Художник</a>
+      <a href="#contact" class="nav__cta" data-nav>Приобрести</a>
+    </nav>
+    <button class="nav__burger" id="menuToggle" aria-label="Меню" aria-expanded="false" aria-controls="fullmenu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- FULLSCREEN MENU -->
+  <div class="fullmenu" id="fullmenu" aria-hidden="true">
+    <div class="fullmenu__bg"></div>
+    <button class="fullmenu__close" id="menuClose" aria-label="Закрыть">
+      <span></span><span></span>
+    </button>
+    <nav class="fullmenu__nav">
+      <a href="#gallery"    class="fullmenu__link" data-nav style="--i:0"><span class="fullmenu__num">01</span><span class="fullmenu__title">Галерея</span></a>
+      <a href="#categories" class="fullmenu__link" data-nav style="--i:1"><span class="fullmenu__num">02</span><span class="fullmenu__title">Категории</span></a>
+      <a href="#about"      class="fullmenu__link" data-nav style="--i:2"><span class="fullmenu__num">03</span><span class="fullmenu__title">Художник</span></a>
+      <a href="#how"        class="fullmenu__link" data-nav style="--i:3"><span class="fullmenu__num">04</span><span class="fullmenu__title">Как купить</span></a>
+      <a href="#contact"    class="fullmenu__link" data-nav style="--i:4"><span class="fullmenu__num">05</span><span class="fullmenu__title">Контакты</span></a>
+    </nav>
+    <div class="fullmenu__foot">
+      <a href="mailto:ildus.murtazin@mail.ru">ildus.murtazin@mail.ru</a>
+      <a href="tel:+78552000000">+7 (8552) 00-00-00</a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__left">
+        <div class="hero__tag" data-reveal>Заслуженный деятель искусств Республики Татарстан</div>
+        <h1 class="hero__title">
+          <span class="hero__title-row">Живопись</span>
+          <span class="hero__title-row hero__title-row--ital">маслом</span>
+          <span class="hero__title-row">на холсте</span>
+        </h1>
+        <p class="hero__lead" data-reveal>
+          Более 40 лет в искусстве. Нижнекамск, Татарстан.
+          Жанровые картины, пейзажи, городские виды — в частных
+          и музейных коллекциях по всей России.
+        </p>
+        <div class="hero__actions" data-reveal>
+          <a href="#gallery" class="btn btn--gold" data-nav>
+            <span>Смотреть работы</span>
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#contact" class="btn btn--ghost" data-nav>Приобрести картину</a>
+        </div>
+        <div class="hero__stats" data-reveal>
+          <div class="hero__stat"><strong>40+</strong><span>лет в искусстве</span></div>
+          <div class="hero__stat"><strong>15+</strong><span>музейных коллекций</span></div>
+          <div class="hero__stat"><strong>ЮНЕСКО</strong><span>член АИАП</span></div>
+        </div>
+      </div>
+      <div class="hero__right">
+        <figure class="hero__painting" data-tilt>
+          <div class="hero__frame">
+            <img src="../paints/Жанровая картина/04 Танец татарский 1  95х100 2019 .jpg"
+                 alt="Татарский танец — Ильдус Муртазин" loading="eager" />
+          </div>
+          <figcaption>«Татарский танец» · масло, холст · 95×100 см · 2019</figcaption>
+        </figure>
+      </div>
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <span class="hero__scroll-line"></span>
+        <span>скролл</span>
+      </div>
+    </section>
+
+    <!-- TICKER -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span>Жанровая живопись</span><span class="sep">✦</span>
+        <span>Пейзаж</span><span class="sep">✦</span>
+        <span>Городской пейзаж</span><span class="sep">✦</span>
+        <span>Натюрморт</span><span class="sep">✦</span>
+        <span>Лирические композиции</span><span class="sep">✦</span>
+        <span>Член Союза Художников России</span><span class="sep">✦</span>
+        <span>Жанровая живопись</span><span class="sep">✦</span>
+        <span>Пейзаж</span><span class="sep">✦</span>
+        <span>Городской пейзаж</span><span class="sep">✦</span>
+        <span>Натюрморт</span><span class="sep">✦</span>
+        <span>Лирические композиции</span><span class="sep">✦</span>
+        <span>Член Союза Художников России</span><span class="sep">✦</span>
+      </div>
+    </div>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="gallery-section">
+      <header class="section-head">
+        <div class="section-head__left">
+          <span class="section-num" data-reveal>01 / Галерея</span>
+          <h2 class="section-title" data-reveal>Избранные <em>работы</em></h2>
+        </div>
+        <div class="gallery-filters" data-reveal>
+          <button class="filter active" data-filter="all">Все</button>
+          <button class="filter" data-filter="genre">Жанровые</button>
+          <button class="filter" data-filter="landscape">Пейзаж</button>
+          <button class="filter" data-filter="city">Городской</button>
+          <button class="filter" data-filter="flowers">Цветы</button>
+          <button class="filter" data-filter="lyric">Лирика</button>
+        </div>
+      </header>
+
+      <div class="gallery-grid" id="galleryGrid">
+
+        <article class="gitem gitem--tall" data-category="genre">
+          <a href="#contact" class="gitem__link">
+            <figure class="gitem__fig">
+              <img src="../paints/Жанровая картина/Грация 120х85 3.jpg" alt="Грация" loading="lazy" />
+              <div class="gitem__overlay">
+                <span class="gitem__name">Грация</span>
+                <span class="gitem__size">120×85 см · масло, холст</span>
+              </div>
+            </figure>
+          </a>
+        </article>
+
+        <article class="gitem" data-category="flowers">
+          <a href="#contact" class="gitem__link">
+            <figure class="gitem__fig">
+              <img src="../paints/Цветы/Ирисы.jpg" alt="Ирисы" loading="lazy" />
+              <div class="gitem__overlay">
+                <span class="gitem__name">Ирисы</span>
+                <span class="gitem__size">масло, холст</span>
+              </div>
+            </figure>
+          </a>
+        </article>
+
+        <article class="gitem gitem--wide" data-category="city">
+          <a href="#contact" class="gitem__link">
+            <figure class="gitem__fig">
+              <img src="../paints/Городской пейзаж/Вечерняя Москва 88х98см.х.м.2025г.jpg" alt="Вечерняя Москва" loading="lazy" />
+              <div class="gitem__overlay">
+                <span class="gitem__name">Вечерняя Москва</span>
+                <span class="gitem__size">88×98 см · 2025</span>
+              </div>
+            </figure>
+          </a>
+        </article>
+
+        <article class="gitem" data-category="landscape">
+          <a href="#contact" class="gitem__link">
+            <figure class="gitem__fig">
+              <img src="../paints/Пейзаж/Вид на Каму.jpg" alt="Вид на Каму" loading="lazy" />
+              <div class="gitem__overlay">
+                <span class="gitem__name">Вид на Каму</span>
+                <span class="gitem__size">масло, холст</span>
+              </div>
+            </figure>
+          </a>
+        </article>
+
+        <article class="gitem" data-category="lyric">
+          <a href="#contact" class="gitem__link">
+            <figure class="gitem__fig">
+              <img src="../paints/Лирические композиции/Увлекательный роман 75х98см2021.jpg" alt="Увлекательный роман" loading="lazy" />
+              <div class="gitem__overlay">
+                <span class="gitem__name">Увлекательный роман</span>
+                <span class="gitem__size">75×98 см · 2021</span>
+              </div>
+            </figure>
+          </a>
+        </article>
+
+        <article class="gitem gitem--tall" data-category="flowers">
+          <a href="#contact" class="gitem__link">
+            <figure class="gitem__fig">
+              <img src="../paints/Цветы/Пионы праздничные в раме 102х122 см.jpg" alt="Пионы праздничные" loading="lazy" />
+              <div class="gitem__overlay">
+                <span class="gitem__name">Пионы праздничные</span>
+                <span class="gitem__size">102×122 см · масло, холст</span>
+              </div>
+            </figure>
+          </a>
+        </article>
+
+        <article class="gitem gitem--wide" data-category="genre">
+          <a href="#contact" class="gitem__link">
+            <figure class="gitem__fig">
+              <img src="../paints/Жанровая картина/Добро пожаловать на Сабантуй!100х150см 2019 copy 2.jpg" alt="Добро пожаловать на Сабантуй!" loading="lazy" />
+              <div class="gitem__overlay">
+                <span class="gitem__name">Добро пожаловать на Сабантуй!</span>
+                <span class="gitem__size">100×150 см · 2019</span>
+              </div>
+            </figure>
+          </a>
+        </article>
+
+        <article class="gitem" data-category="city">
+          <a href="#contact" class="gitem__link">
+            <figure class="gitem__fig">
+              <img src="../paints/Городской пейзаж/Москва Сити 70х84 82х96см в раме см.х.м.2025г..jpg" alt="Москва Сити" loading="lazy" />
+              <div class="gitem__overlay">
+                <span class="gitem__name">Москва Сити</span>
+                <span class="gitem__size">70×84 см · 2025</span>
+              </div>
+            </figure>
+          </a>
+        </article>
+
+        <article class="gitem" data-category="landscape">
+          <a href="#contact" class="gitem__link">
+            <figure class="gitem__fig">
+              <img src="../paints/Пейзаж/На Каме.jpg" alt="На Каме" loading="lazy" />
+              <div class="gitem__overlay">
+                <span class="gitem__name">На Каме</span>
+                <span class="gitem__size">масло, холст</span>
+              </div>
+            </figure>
+          </a>
+        </article>
+
+      </div>
+
+      <div class="gallery-more" data-reveal>
+        <a href="#contact" class="btn btn--outline">
+          <span>Запросить полный каталог</span>
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- FEATURED WORK -->
+    <section class="featured">
+      <div class="featured__inner">
+        <figure class="featured__fig" data-parallax>
+          <img src="../paints/Жанровая картина/Добро пожаловать на Сабантуй!100х150см 2019 copy 2.jpg"
+               alt="Добро пожаловать на Сабантуй!" loading="lazy" />
+        </figure>
+        <div class="featured__text">
+          <span class="section-num" data-reveal>/ Избранное</span>
+          <blockquote class="featured__quote" data-reveal>
+            «Живопись — это не изображение видимого, а воплощение невидимого»
+          </blockquote>
+          <div class="featured__meta" data-reveal>
+            <p>«Добро пожаловать на Сабантуй!»<br/>Масло, холст · 100×150 см · 2019</p>
+            <p>Из цикла жанровых картин, посвящённых культуре и традициям народов Татарстана.</p>
+          </div>
+          <a href="#contact" class="btn btn--gold" data-reveal>Узнать о наличии работ</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section id="categories" class="categories">
+      <header class="section-head section-head--center">
+        <span class="section-num" data-reveal>02 / Категории</span>
+        <h2 class="section-title" data-reveal>Направления <em>творчества</em></h2>
+      </header>
+
+      <div class="categories__grid">
+
+        <a href="#contact" class="catcard" data-reveal style="--delay:0ms">
+          <div class="catcard__img"><img src="../paints/Жанровая картина/04 Танец татарский 1  95х100 2019 .jpg" alt="Жанровая живопись" loading="lazy" /></div>
+          <div class="catcard__body">
+            <span class="catcard__num">01</span>
+            <h3>Жанровая живопись</h3>
+            <p>Сцены из жизни народов Татарстана, танцы, праздники, исторические образы</p>
+            <span class="catcard__arrow">→</span>
+          </div>
+        </a>
+
+        <a href="#contact" class="catcard" data-reveal style="--delay:80ms">
+          <div class="catcard__img"><img src="../paints/Пейзаж/Вид на Каму.jpg" alt="Пейзаж" loading="lazy" /></div>
+          <div class="catcard__body">
+            <span class="catcard__num">02</span>
+            <h3>Пейзаж</h3>
+            <p>Природа Татарстана, Кама, леса и рощи — написанные с натуры и по памяти</p>
+            <span class="catcard__arrow">→</span>
+          </div>
+        </a>
+
+        <a href="#contact" class="catcard" data-reveal style="--delay:160ms">
+          <div class="catcard__img"><img src="../paints/Городской пейзаж/Вечерняя Москва 88х98см.х.м.2025г.jpg" alt="Городской пейзаж" loading="lazy" /></div>
+          <div class="catcard__body">
+            <span class="catcard__num">03</span>
+            <h3>Городской пейзаж</h3>
+            <p>Москва, Казань, Нижнекамск — города в вечернем свете и праздничном ритме</p>
+            <span class="catcard__arrow">→</span>
+          </div>
+        </a>
+
+        <a href="#contact" class="catcard" data-reveal style="--delay:240ms">
+          <div class="catcard__img"><img src="../paints/Цветы/Пионы праздничные в раме 102х122 см.jpg" alt="Цветы" loading="lazy" /></div>
+          <div class="catcard__body">
+            <span class="catcard__num">04</span>
+            <h3>Цветы</h3>
+            <p>Букеты и натюрморты, написанные с любовью к свету, форме и цвету</p>
+            <span class="catcard__arrow">→</span>
+          </div>
+        </a>
+
+        <a href="#contact" class="catcard" data-reveal style="--delay:320ms">
+          <div class="catcard__img"><img src="../paints/Лирические композиции/Увлекательный роман 75х98см2021.jpg" alt="Лирические композиции" loading="lazy" /></div>
+          <div class="catcard__body">
+            <span class="catcard__num">05</span>
+            <h3>Лирические композиции</h3>
+            <p>Поэтические многофигурные работы, полные воздуха и настроения</p>
+            <span class="catcard__arrow">→</span>
+          </div>
+        </a>
+
+        <a href="#contact" class="catcard catcard--dark" data-reveal style="--delay:400ms">
+          <div class="catcard__body catcard__body--centered">
+            <span class="catcard__plus">+</span>
+            <h3>Портреты на заказ</h3>
+            <p>Индивидуальные заказы. Обсудите ваш запрос напрямую с художником</p>
+            <span class="catcard__arrow">→</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+      <div class="about__media" data-parallax>
+        <img src="../paints/Жанровая картина/Северный танец 95х100 2025 копия.jpg"
+             alt="Северный танец — Ильдус Муртазин" loading="lazy" />
+        <div class="about__media-cap">«Северный танец» · 95×100 см · 2025</div>
+      </div>
+      <div class="about__content">
+        <span class="section-num" data-reveal>03 / Художник</span>
+        <h2 class="section-title" data-reveal><em>Ильдус</em> Муртазин</h2>
+        <div class="about__bio" data-reveal>
+          <p>Живу и работаю в Нижнекамске. В 1996 году окончил Московскую государственную художественную академию им. С.Г. Строганова. Заслуженный деятель искусств Республики Татарстан (2014).</p>
+          <p>Член Союза Художников России, Международной ассоциации изобразительных искусств АИАП ЮНЕСКО, творческого союза художников России.</p>
+          <p>Картины находятся в Казанском музее изобразительных искусств, музее Казанского Кремля, Национальном музее Республики Татарстан и в частных коллекциях по всему миру.</p>
+        </div>
+        <dl class="about__awards" data-reveal>
+          <div><dt>2014</dt><dd>Заслуженный деятель искусств РТ</dd></div>
+          <div><dt>2022</dt><dd>«Художник года» — Нижнекамск</dd></div>
+          <div><dt>ЮНЕСКО</dt><dd>Член АИАП</dd></div>
+          <div><dt>15+</dt><dd>Музейных коллекций</dd></div>
+        </dl>
+        <a href="#contact" class="btn btn--gold" data-reveal>Связаться с художником</a>
+      </div>
+    </section>
+
+    <!-- HOW TO BUY -->
+    <section id="how" class="how">
+      <header class="section-head section-head--center">
+        <span class="section-num" data-reveal>04 / Покупка</span>
+        <h2 class="section-title" data-reveal>Как <em>приобрести</em> картину</h2>
+        <p class="section-lead" data-reveal>Прямая продажа без посредников. Сертификат подлинности, бережная упаковка и доставка по России и за рубеж.</p>
+      </header>
+      <ol class="how__steps">
+        <li class="how__step" data-reveal>
+          <span class="how__num">01</span>
+          <div class="how__body"><h3>Выберите работу</h3><p>Просматривайте галерею или напишите — пришлём актуальный каталог с ценами и наличием.</p></div>
+        </li>
+        <li class="how__step" data-reveal>
+          <span class="how__num">02</span>
+          <div class="how__body"><h3>Уточните детали</h3><p>Пришлём дополнительные фото, видео. Резервируем работу на 48 часов без предоплаты.</p></div>
+        </li>
+        <li class="how__step" data-reveal>
+          <span class="how__num">03</span>
+          <div class="how__body"><h3>Оплатите</h3><p>Перевод или рассрочка. Сертификат подлинности с подписью художника включён в стоимость.</p></div>
+        </li>
+        <li class="how__step" data-reveal>
+          <span class="how__num">04</span>
+          <div class="how__body"><h3>Получите картину</h3><p>Профессиональная упаковка. Доставка по России и миру. Все работы застрахованы при перевозке.</p></div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <div class="contact__decor" aria-hidden="true">
+        <img src="../paints/Цветы/Ирисы.jpg" alt="" />
+      </div>
+      <div class="contact__inner">
+        <span class="section-num" data-reveal>05 / Контакты</span>
+        <h2 class="contact__title" data-reveal>
+          <span>Напишите</span>
+          <em>сегодня</em>
+        </h2>
+        <p class="contact__lead" data-reveal>Подберём работу под ваше пространство, пришлём актуальный каталог или организуем личный просмотр в мастерской.</p>
+
+        <!-- Состояние success/error заполняется через JS из URL-параметра -->
+        <div class="form-success" id="formSuccess" hidden>
+          <span class="form-success__icon">✦</span>
+          <strong>Сообщение отправлено!</strong>
+          <p>Ответим в течение нескольких часов.</p>
+        </div>
+        <div class="form-error" id="formError" hidden></div>
+
+        <form class="contact__form" id="contactForm" method="POST" action="send.php">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="f-name">Ваше имя</label>
+              <input type="text" id="f-name" name="name" placeholder="Как вас зовут?" required autocomplete="name" />
+            </div>
+            <div class="form-field">
+              <label for="f-email">Email</label>
+              <input type="email" id="f-email" name="email" placeholder="your@email.com" required autocomplete="email" />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="f-phone">Телефон <span>(необязательно)</span></label>
+            <input type="tel" id="f-phone" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel" />
+          </div>
+          <div class="form-field form-field--area">
+            <label for="f-msg">Сообщение</label>
+            <textarea id="f-msg" name="message" rows="4" placeholder="Какая работа вас интересует? Или опишите настроение и размер, которые ищете..."></textarea>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn btn--gold btn--large">
+              <span>Отправить запрос</span>
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <p class="form-note">Ответим в течение нескольких часов</p>
+          </div>
+        </form>
+
+        <div class="contact__alt" data-reveal>
+          <div class="contact__link-group">
+            <span>Или напрямую:</span>
+            <a href="tel:+78552000000">+7 (8552) 00-00-00</a>
+            <a href="mailto:ildus.murtazin@mail.ru">ildus.murtazin@mail.ru</a>
+          </div>
+          <div class="contact__link-group">
+            <span>Мастерская:</span>
+            <span>г. Нижнекамск, Республика Татарстан</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <span class="footer__logo">И·М</span>
+        <p>Ильдус Хазиевич Муртазин<br/>Заслуженный деятель искусств РТ</p>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label">Разделы</span>
+        <a href="#gallery"    data-nav>Галерея</a>
+        <a href="#categories" data-nav>Категории</a>
+        <a href="#about"      data-nav>Художник</a>
+        <a href="#contact"    data-nav>Контакты</a>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label">Покупателям</span>
+        <a href="#how"     data-nav>Как купить</a>
+        <a href="#contact" data-nav>Портреты на заказ</a>
+        <a href="#contact" data-nav>Доставка</a>
+        <a href="#contact" data-nav>Сертификат</a>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label">Связь</span>
+        <a href="tel:+78552000000">+7 (8552) 00-00-00</a>
+        <a href="mailto:ildus.murtazin@mail.ru">ildus.murtazin@mail.ru</a>
+        <span>Нижнекамск, РТ</span>
+      </div>
+    </div>
+    <div class="footer__bar">
+      <span>© 2026 Ильдус Муртазин</span>
+      <span>Живопись маслом · Нижнекамск</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
